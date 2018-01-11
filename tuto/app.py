@@ -17,7 +17,7 @@ def mkpath(p):
 			os.path.dirname(__file__),
 			p))
 from flask_sqlalchemy import SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + mkpath('../tuto.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + mkpath('../Projet.db')
 db = SQLAlchemy(app)
 
-app.config['SECRET_KEY'] = "bbb225a3-bd0b-46f2-bf5a-9f1bc13d0c54" 
+app.config['SECRET_KEY'] = "bbb225a3-bd0b-46f2-bf5a-9f1bc13d0c54"

@@ -1,35 +1,28 @@
 from .app import db
 
-class Author(db.Model):
+class Artiste(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
-	name = db.Column(db.String(100))
+	nom = db.Column(db.String(100))
 
-	def __repr__(self):
-		return"<Author (%d) %s" % (self.id, self.name)
 
-	def get_author(self):
-		return self.id
-
-class Book(db.Model):
+class Album(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
-	price = db.Column(db.Float)
-	title = db.Column(db.String(100))
-	url = db.Column(db.String(100))
-	img = db.Column(db.String(100))
-	author_id = db.Column(db.Integer, db.ForeignKey("author.id"))
-	author = db.relationship("Author", backref=db.backref("books", lazy="dynamic"))
+	genre = db.Column(db.String(100))
+	image = db.Column(db.String(100))
+	titre = db.Column(db.String(100))
+	dateSortie = db.Column(db.String(100))
+	artiste_id = db.Column(db.Integer, db.ForeignKey("artiste.id"))
+	artiste = db.relationship("Artiste", backref=db.backref("artiste", lazy="dynamic"))
 
-	def __repr__(self):
-		return "<Book (%d) %s>" % (self.id, self.title)
 
-def get_sample():
-	return Book.query.limit(10).all()
+def get_la_liste_album():
+	return Album.query.all()
 
-from flask_login import UserMixin
-
-class User(db.Model, UserMixin):
-	username = db.Column(db.String(50), primary_key=True)
-	password = db.Column(db.String(64))
-
-	def get_id(self):
-		return self.username
+# from flask_login import UserMixin
+#
+# class User(db.Model, UserMixin):
+# 	username = db.Column(db.String(50), primary_key=True)
+# 	password = db.Column(db.String(64))
+#
+# 	def get_id(self):
+# 		return self.username
