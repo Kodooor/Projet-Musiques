@@ -1,4 +1,4 @@
 from .app import app, manager
-import tuto.views
-import tuto.models
-import tuto.commands
+import projet.views
+import projet.models
+import projet.commands

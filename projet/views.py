@@ -9,25 +9,18 @@ from .models import *
 
 @app.route("/")
 def home():
-	listeAlbum = get_la_liste_album()
-	print(listeAlbum)
 	return render_template(
 		"home.html",
-		title="Hello World!",
-		listeAlbum = listeAlbum)
+		title="Hello World!")
 
-@app.route("/album")
-def get_albums_pour_page(numero):
-    debut = int(numero) * 6
-    fin = int(numero) * 6 + 6
-    return Album.query.all()[debut:fin]
+@app.route("/album/<numero_page>")
+def afficherListeAlbum(numero_page):
+	listeAlbum = get_albums_pour_page(numero_page)
+	return render_template(
+		"albums.html",
+		title="Liste des albums",
+		listeAlbum=listeAlbum)
 
-def get_nombre_de_page_album():
-    albums = Album.query.all()
-    nombre = math.ceil((len(albums)-1)/6)
-    if nombre == 0:
-        return 1
-    return nombre
 
 # import yaml, os.path
 #

@@ -18,6 +18,17 @@ class Album(db.Model):
 def get_la_liste_album():
 	return Album.query.all()
 
+def get_albums_pour_page(numero):
+    debut = int(numero) * 6
+    fin = int(numero) * 6 + 6
+    return Album.query.all()[debut:fin]
+
+def get_nombre_de_page_album():
+    albums = Album.query.all()
+    nombre = math.ceil((len(albums)-1)/6)
+    if nombre == 0:
+        return 1
+    return nombre
 # from flask_login import UserMixin
 #
 # class User(db.Model, UserMixin):

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+	<body>
+		<h1>{{title}}</h1>
+		<ul>
+		{% for a in listeAlbum %}
+			<li>{{ a.titre }}</li>
+		{% endfor %}
+		</ul>
+	</body>
+{% endblock %}
