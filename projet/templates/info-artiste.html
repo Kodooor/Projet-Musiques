@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet"
+href="{{ url_for('static', filename='info-artiste.css') }}"/>
+{% endblock %}
+{% block main %}
+  <h1> Information </h1>
+  <h2> {{ nomA }} </h1>
+  <img width="20%" src="{{ url_for('static', filename='Images/Artiste/'+nomA+'.jpg')}}"alt="Image non trouvée">
+  <h4> Albums réalisés : </h4>
+      {% for a in listeAlb %}
+      <ul>
+        <li>Titre : {{ a.titre }} </li>
+        <li> <img width="20%" src="{{ url_for('static', filename='Images/Album/'+a.image)}}"alt="Image non trouvée"> </li>
+        <li> Genre : {{ a.genre }}</li>
+        <li> Date de sortie : {{ a.dateSortie }}</li>
+      </table>
+      {% endfor %}
+</body>
+{% endblock %}

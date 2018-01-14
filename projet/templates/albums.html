@@ -9,7 +9,7 @@ href="{{ url_for('static', filename='albums.css') }}"/>
 		{% for a in listeAlbum %}
 			<li>
 				<p>{{ a.titre }}</p>
-				<img width="80%"src="{{ url_for('static', filename='Images/'+a.image)}}"alt="Image non trouvée">
+				<img width="80%" src="{{ url_for('static', filename='Images/Album/'+a.image)}}"alt="Image non trouvée">
 			</li>
 		{% endfor %}
 		</ul>
