@@ -1,0 +1,126 @@
+- by: Ayo
+  entryId: 1
+  genre: Soul
+  img: billieve.jpg
+  parent: Polydor
+  releaseYear: 2011
+  title: Billie-Eve
+- by: Ben Harper
+  entryId: 2
+  genre: Rock
+  img: lifeline.jpg
+  parent: Virgin Records
+  releaseYear: 2007
+  title: Lifeline
+- by: Imagine Dragon
+  entryId: 3
+  genre: Rock
+  img: evolve.jpg
+  parent: Interscope Records
+  releaseYear: 2017
+  title: Evolve
+- by: Imagine Dragon
+  entryId: 4
+  genre: Rock
+  img: nightvision.jpg
+  parent: Interscope Records
+  releaseYear: 2012
+  title: Night Visions
+- by: Damso
+  entryId: 5
+  genre: Rap
+  img: ipseite.jpg
+  parent: 92i
+  releaseYear: 2017
+  title: Ipséité
+- by: Orelsan
+  entryId: 6
+  genre: Rap
+  img: lafeteestfinie.jpg
+  parent: 3eme bureau
+  releaseYear: 2017
+  title: La fete est finie
+- by: Adele
+  entryId: 7
+  genre: Pop
+  img: 21.jpg
+  parent: XL, Columbia
+  releaseYear: 2011
+  title: '21'
+- by: Amy Whinehouse
+  entryId: 8
+  genre: Blouse
+  img: lionnesshiddentreasures.png
+  parent: Island Records
+  releaseYear: 2011
+  title: Lioness Hidden Treasures
+- by: Antony and the Johnsons
+  entryId: 9
+  genre: Rock
+  img: thecryinglight.jpg
+  parent: Rough Trade
+  releaseYear: 2009
+  title: The Crying Light
+- by: Arctic Monkeys
+  entryId: 10
+  genre: Rock
+  img: favouriteworstnightmare.jpg
+  parent: Domino Records
+  releaseYear: 2007
+  title: Favourite Worst Nightmare
+- by: Biga Ranx
+  entryId: 11
+  genre: Reggaeton
+  img: goodmorningmidnight.jpg
+  parent: X-Ray Production
+  releaseYear: 2013
+  title: Good Morning Midnight
+- by: Bob Marley
+  entryId: 12
+  genre: Reggae
+  img: legend.jpg
+  parent: Tuff Gong
+  releaseYear: 1984
+  title: Legend
+- by: Bruno Mars
+  entryId: 13
+  genre: Funk
+  img: doowopsandhooligans.jpg
+  parent: Atlantic Records, Elektra Records
+  releaseYear: 2010
+  title: Doo-Wops & Hooligans
+- by: C2C
+  entryId: 14
+  genre: Trip
+  img: tetra.png
+  parent: Universal Music France
+  releaseYear: 2012
+  title: Tetra
+- by: Ed Sheeran
+  entryId: 15
+  genre: Pop
+  img: divide.png
+  parent: Atlantic Records UK
+  releaseYear: 2017
+  title: Divide
+- by: Kamini
+  entryId: 16
+  genre: Hip-hop
+  img: psychostarworld.jpg
+  parent: RCA Records
+  releaseYear: 2007
+  title: Psychostar World
+- by: Macklemore
+  entryId: 17
+  genre: Hip-hop
+  img: theheist.jpg
+  parent: Macklemore LLC
+  releaseYear: 2012
+  title: The Heist
+- by: Mark Ronson
+  entryId: 18
+  genre: Funk
+  img: uptownspecial.png
+  parent: Columbia Records
+  releaseYear: 2015
+  title: Uptown Special
