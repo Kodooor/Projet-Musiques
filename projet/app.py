@@ -9,6 +9,9 @@ app.config['BOOTSTRAP_SERVE_LOCAL'] = True
 from flask_bootstrap import Bootstrap
 bootstrap = Bootstrap(app)
 
+from flask_login import LoginManager
+login_manager = LoginManager(app)
+
 import os.path
 
 def mkpath(p):

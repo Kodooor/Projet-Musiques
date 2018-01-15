@@ -1,4 +1,6 @@
 from .app import db
+from flask_login import UserMixin
+from .app import login_manager
 
 class Artiste(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -62,7 +64,12 @@ def get_artiste_albums(art):
 	return liste
 
 
+@login_manager.user_loader
+def load_user(username):
+	return User.query.get(username)
 
+def get_user(login):
+	return User.query.get(login)
 
 
 # def get_artite_albums():
@@ -73,11 +80,10 @@ def get_artiste_albums(art):
 # 	return
 
 
-# from flask_login import UserMixin
-#
-# class User(db.Model, UserMixin):
-# 	username = db.Column(db.String(50), primary_key=True)
-# 	password = db.Column(db.String(64))
-#
-# 	def get_id(self):
-# 		return self.username
+
+class User(db.Model, UserMixin):
+	login = db.Column(db.String(50), primary_key=True)
+	password = db.Column(db.String(50))
+
+	def get_id(self):
+		return self.login
