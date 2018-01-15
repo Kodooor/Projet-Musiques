@@ -21,12 +21,12 @@ def afficherListeAlbum(numero_page):
 		title="Liste des albums",
 		listeAlbum=listeAlbum)
 
-@app.route("/album/details/<num_album>")
+@app.route("/album/informations/<num_album>")
 def afficherInformationsAlbums(num_album):
-	informations = get_la_liste_album()
+	informations = get_album(num_album)
 	return render_template(
 		"informations.html",
-		title="Informations album",
+		title="Info",
 		informations=informations)
 
 
