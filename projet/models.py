@@ -29,6 +29,7 @@ def get_nombre_de_page_album():
     if nombre == 0:
         return 1
     return nombre
+
 # from flask_login import UserMixin
 #
 # class User(db.Model, UserMixin):
