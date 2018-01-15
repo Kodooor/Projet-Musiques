@@ -7,11 +7,18 @@ href="{{ url_for('static', filename='home.css') }}"/>
 {% block main %}
   {% if current_user.is_authenticated %}
     <h2> Profil de {{ current_user.login}}</h2>
-    <h3> Mes playlists </h3>
-    <ul>
-        <li></li>
-        <li></li>
-    </ul>
+
+    <div class='changerMdp'>
+      <a class="nav-link" href="{{url_for('changermdp')}}">Changer mon mot de passe</a>
+    </div>
+
+    <div class='playlists'>
+      <h3> Mes playlists </h3>
+      <ul>
+          <li></li>
+          <li></li>
+      </ul>
+    </div>
 
 
 
