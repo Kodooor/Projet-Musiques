@@ -43,6 +43,11 @@ def get_nombre_de_page_album():
 def get_artiste():
 	return Artiste.query.all()
 
+# GESTION DES ARTISTES
+def get_artiste_par_nom(nom):
+	return Artiste.query.filter(Artiste.nom == nom).all()
+
+
 def get_artiste_page(numero):
     debut = int(numero) * 6
     fin = int(numero) * 6 + 6
