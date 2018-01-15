@@ -32,6 +32,18 @@ def syncdb():
 	db.create_all()
 
 @manager.command
+def loadMusique(filename):
+    db.create_all()
+    musique = yaml.load(open(filename))
+    for m in musique:
+        o = Musique(album_id = m['albumId'],
+        nom_de_fichier = m["ficname"],
+        titre = m["title"])
+        db.session.add(o)
+    db.session.commit()
+
+
+@manager.command
 def newuser(username, password):
 	'''adds a new user'''
 	from .models import User

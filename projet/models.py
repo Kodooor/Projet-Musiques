@@ -18,6 +18,7 @@ class Album(db.Model):
 	artiste_id = db.Column(db.Integer, db.ForeignKey("artiste.id"))
 	artiste = db.relationship("Artiste", backref=db.backref("artiste", lazy="dynamic"))
 
+
 # GESTION DES ALBUMS
 
 def get_la_liste_album():
@@ -90,3 +91,18 @@ class User(db.Model, UserMixin):
 
 	def get_id(self):
 		return self.login
+
+class Musique(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	titre = db.Column(db.String(100))
+	nom_de_fichier = db.Column(db.String(100))
+	album_id = db.Column(db.Integer, db.ForeignKey("album.id"))
+	album = db.relationship("Album", backref=db.backref("album", lazy="dynamic"))
+
+class Playlist(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	titre = db.Column(db.String(100))
+	musique_id = db.Column(db.Integer, db.ForeignKey("musique.id"))
+	musique = db.relationship("Musique", backref=db.backref("musique", lazy="dynamic"))
+	user_login = db.Column(db.Integer, db.ForeignKey("user.login"))
+	user = db.relationship("User", backref=db.backref("user", lazy="dynamic"))
