@@ -35,10 +35,14 @@ class Musique(db.Model):
 class Playlist(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	titre = db.Column(db.String(100))
-	musique_id = db.Column(db.Integer, db.ForeignKey("musique.id"))
-	musique = db.relationship("Musique", backref=db.backref("musique", lazy="dynamic"))
 	user_login = db.Column(db.Integer, db.ForeignKey("user.login"))
 	user = db.relationship("User", backref=db.backref("user", lazy="dynamic"))
+
+class RelationPM(db.Model):
+	musique_id = db.Column(db.Integer, db.ForeignKey("musique.id"), primary_key=True)
+	musique = db.relationship("Musique", backref=db.backref("musique", lazy="dynamic"))
+	playlist_id = db.Column(db.Integer, db.ForeignKey("playlist.id"), primary_key=True)
+	playlist = db.relationship("Playlist", backref=db.backref("playlist", lazy="dynamic"))
 
 # GESTION DES ALBUMS
 
@@ -98,6 +102,17 @@ def get_playlists(login):
 			for p in listeP:
 				if p.user_login == u.login :
 					listeRep.append(p)
+	return listeRep
+
+def get_musiques(idP):
+	listeR = RelationPM.query.all()
+	listeM = Musique.query.all()
+	listeRep = []
+	for r in listeR:
+		if r.playlist_id == idP:
+			for m in listeM:
+				if r.musique_id == m.id :
+					listeRep.append(m)
 	return listeRep
 
 
