@@ -29,7 +29,6 @@ def afficherInformationsAlbums(num_album):
 		title="Informations album",
 		informations=informations)
 
-
 @app.route("/artiste/<numero_page>")
 def afficherListeArtiste(numero_page):
 	listeArtiste = get_artiste_page(numero_page)

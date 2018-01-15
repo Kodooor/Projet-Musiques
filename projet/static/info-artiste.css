@@ -4,7 +4,4 @@ section{
 table{
   display: flex;
   flex-wrap: nowrap;
-  border:collapse;
 }
-
-
