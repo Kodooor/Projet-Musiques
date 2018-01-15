@@ -1,3 +1,10 @@
+section{
+  padding-left: 45%
+}
 table{
+  display: flex;
+  flex-wrap: nowrap;
   border:collapse;
 }
+
+
