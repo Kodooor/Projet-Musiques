@@ -32,7 +32,6 @@ def afficherListeArtiste(numero_page):
 def afficherInfoArtiste(art):
 	listeAlb= get_artiste_albums(art)
 	return render_template("info-artiste.html",
-		title="Information",
 		nomA=art,
 		listeAlb=listeAlb)
 
