@@ -21,6 +21,15 @@ def afficherListeAlbum(numero_page):
 		title="Liste des albums",
 		listeAlbum=listeAlbum)
 
+@app.route("/album/details/<num_album>")
+def afficherInformationsAlbums(num_album):
+	informations = get_la_liste_album()
+	return render_template(
+		"informations.html",
+		title="Informations album",
+		informations=informations)
+
+
 @app.route("/artiste/<numero_page>")
 def afficherListeArtiste(numero_page):
 	listeArtiste = get_artiste_page(numero_page)
@@ -34,8 +43,6 @@ def afficherInfoArtiste(art):
 	return render_template("info-artiste.html",
 		nomA=art,
 		listeAlb=listeAlb)
-
-
 
 
 # import yaml, os.path
