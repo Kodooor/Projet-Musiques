@@ -18,6 +18,27 @@ class Album(db.Model):
 	artiste_id = db.Column(db.Integer, db.ForeignKey("artiste.id"))
 	artiste = db.relationship("Artiste", backref=db.backref("artiste", lazy="dynamic"))
 
+class User(db.Model, UserMixin):
+	login = db.Column(db.String(50), primary_key=True)
+	password = db.Column(db.String(50))
+
+	def get_id(self):
+		return self.login
+
+class Musique(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	titre = db.Column(db.String(100))
+	nom_de_fichier = db.Column(db.String(100))
+	album_id = db.Column(db.Integer, db.ForeignKey("album.id"))
+	album = db.relationship("Album", backref=db.backref("album", lazy="dynamic"))
+
+class Playlist(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	titre = db.Column(db.String(100))
+	musique_id = db.Column(db.Integer, db.ForeignKey("musique.id"))
+	musique = db.relationship("Musique", backref=db.backref("musique", lazy="dynamic"))
+	user_login = db.Column(db.Integer, db.ForeignKey("user.login"))
+	user = db.relationship("User", backref=db.backref("user", lazy="dynamic"))
 
 # GESTION DES ALBUMS
 
@@ -67,6 +88,18 @@ def get_artiste_albums(art):
 						liste.append(b)
 	return liste
 
+# GESTION DES PLAYLISTS
+def get_playlists(login):
+	listeU = User.query.all()
+	listeP = Playlist.query.all()
+	listeRep = []
+	for u in listeU:
+		if u.login == login:
+			for p in listeP:
+				if p.user_login == u.login :
+					listeRep.append(p)
+	return listeRep
+
 
 @login_manager.user_loader
 def load_user(username):
@@ -82,27 +115,3 @@ def get_user(login):
 # 	for artiste in query :
 # 	album = Artiste.filter_by(artiste_id=id)
 # 	return
-
-
-
-class User(db.Model, UserMixin):
-	login = db.Column(db.String(50), primary_key=True)
-	password = db.Column(db.String(50))
-
-	def get_id(self):
-		return self.login
-
-class Musique(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	titre = db.Column(db.String(100))
-	nom_de_fichier = db.Column(db.String(100))
-	album_id = db.Column(db.Integer, db.ForeignKey("album.id"))
-	album = db.relationship("Album", backref=db.backref("album", lazy="dynamic"))
-
-class Playlist(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	titre = db.Column(db.String(100))
-	musique_id = db.Column(db.Integer, db.ForeignKey("musique.id"))
-	musique = db.relationship("Musique", backref=db.backref("musique", lazy="dynamic"))
-	user_login = db.Column(db.Integer, db.ForeignKey("user.login"))
-	user = db.relationship("User", backref=db.backref("user", lazy="dynamic"))
