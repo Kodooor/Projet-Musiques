@@ -25,27 +25,26 @@ def loaddb(filename):
 			artiste_id = a.id)
 		db.session.add(o)
 	db.session.commit()
-#
-# @manager.command
-# def syncdb():
-# 	'''Creates all missing tables.'''
-# 	db.create_all()
-#
-# @manager.command
-# def newuser(username, password):
-# 	'''adds a new user'''
-# 	from .models import User
-# 	from hashlib import sha256
-# 	m = sha256()
-# 	m.update(password.encode())
-# 	u = User(username=username, password=m.hexdigest())
-# 	db.session.add(u)
-# 	db.session.commit()
-#
-# @manager.command
-# def passwd(username, password):
-# 	'''change the password of a user'''
-# 	from .models import User
-# 	from hashlib import sha256
-# 	m = sha256()
-#
+
+@manager.command
+def syncdb():
+	'''Creates all missing tables.'''
+	db.create_all()
+
+@manager.command
+def newuser(username, password):
+	'''adds a new user'''
+	from .models import User
+	from hashlib import sha256
+	m = sha256()
+	m.update(password.encode())
+	u = User(login=username, password=m.hexdigest())
+	db.session.add(u)
+	db.session.commit()
+
+@manager.command
+def passwd(username, password):
+	'''change the password of a user'''
+	from .models import User
+	from hashlib import sha256
+	m = sha256()
