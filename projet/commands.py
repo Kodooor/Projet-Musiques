@@ -32,16 +32,34 @@ def syncdb():
 	db.create_all()
 
 @manager.command
+def loadPlaylist(filename):
+    db.create_all()
+    playlist = yaml.load(open(filename))
+    for m in playlist:
+        o = Playlist(titre = m["titre"],
+        user_login = m["user_login"])
+        db.session.add(o)
+    db.session.commit()
+
+
+@manager.command
 def loadMusique(filename):
     db.create_all()
     musique = yaml.load(open(filename))
     for m in musique:
-        o = Musique(album_id = m['albumId'],
-        nom_de_fichier = m["ficname"],
-        titre = m["title"])
+        o = Musique(album_id = m['albumId'],nom_de_fichier = m["ficname"],titre = m["title"])
         db.session.add(o)
     db.session.commit()
 
+@manager.command
+def loadRelations(filename):
+    db.create_all()
+    playlist = yaml.load(open(filename))
+    for m in playlist:
+        o = RelationPM(musique_id = m["musique_id"],
+        playlist_id = m["playlist_id"])
+        db.session.add(o)
+    db.session.commit()
 
 @manager.command
 def newuser(username, password):

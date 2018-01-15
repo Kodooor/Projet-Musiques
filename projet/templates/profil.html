@@ -11,15 +11,31 @@ href="{{ url_for('static', filename='home.css') }}"/>
     <div class='changerMdp'>
       <a class="nav-link" href="{{url_for('changermdp')}}">Changer mon mot de passe</a>
     </div>
-
+    {% if title == 'Profil' %}
     <div class='playlists'>
       <h3> Mes playlists </h3>
       <ul>
-          <li></li>
-          <li></li>
+        {% for r in listeP %}
+          <li>
+            <a href="{{url_for('afficherPlaylist', idPlay= r.id )}}">
+            <p>{{ r.titre }}</p>
+            </a>
+          </li>
+        {% endfor %}
       </ul>
     </div>
-
+    {% else %}
+    <div class='playlists'>
+      <h3> Les musiques de la playlist : </h3>
+      <ul>
+        {% for r in listeR %}
+          <li>
+            <p>{{ r.titre }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {%endif%}
 
 
 

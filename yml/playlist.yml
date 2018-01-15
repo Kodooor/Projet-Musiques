@@ -1,6 +1,6 @@
-- by: Marie
-  entryId: 1
-  genre: [Feeling good, Old-School]
-  parent: FilleulCorp
-  releaseYear: 2017
-  title: Feeling Good
+- id: 1
+  titre: Playlist trop bien
+  user_login: az
+- id: 2
+  titre: Celle la est encore mieux
+  user_login: juju

@@ -94,15 +94,16 @@ def get_artiste_albums(art):
 
 # GESTION DES PLAYLISTS
 def get_playlists(login):
-	listeU = User.query.all()
-	listeP = Playlist.query.all()
-	listeRep = []
-	for u in listeU:
-		if u.login == login:
-			for p in listeP:
-				if p.user_login == u.login :
-					listeRep.append(p)
-	return listeRep
+	return Playlist.query.filter(Playlist.user_login == login).all()
+	# listeU = User.query.all()
+	# listeP = Playlist.query.all()
+	# listeRep = []
+	# for u in listeU:
+	# 	if u.login == login:
+	# 		for p in listeP:
+	# 			if p.user_login == u.login :
+	# 				listeRep.append(p)
+	# return listeRep
 
 def get_musiques(idP):
 	listeR = RelationPM.query.all()
@@ -112,7 +113,7 @@ def get_musiques(idP):
 		if r.playlist_id == idP:
 			for m in listeM:
 				if r.musique_id == m.id :
-					listeRep.append(m)
+					listeRep.append(r)
 	return listeRep
 
 

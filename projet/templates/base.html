@@ -47,7 +47,7 @@ href="{{ url_for('static', filename='home.css') }}"/>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="{{url_for('profil', log=current_user)}}">Profil</a>
+              <a class="dropdown-item" href="{{url_for('profil', log=current_user.login)}}">Profil</a>
               <a class="dropdown-item" href="#">A propos de nous // Nous contacter</a>
             </div>
           </li>

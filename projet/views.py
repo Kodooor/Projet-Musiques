@@ -130,6 +130,13 @@ def profil(log):
 	listeP = get_playlists(log)
 	return render_template("profil.html",title="Profil", listeP = listeP)
 
+@app.route("/profil/playlist/<idPlay>")
+def afficherPlaylist(idPlay):
+	listeR = get_musiques(idPlay)
+	return render_template("profil.html",title="Playlist", listeR = listeR)
+
+
+
 # import yaml, os.path
 #
 # data = yaml.load(
