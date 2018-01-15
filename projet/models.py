@@ -23,6 +23,9 @@ class Album(db.Model):
 def get_la_liste_album():
 	return Album.query.all()
 
+def get_album(id):
+	return Album.query.get(id)
+
 def get_albums_pour_page(numero):
     debut = int(numero) * 6
     fin = int(numero) * 6 + 6

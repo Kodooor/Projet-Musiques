@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet"
+href="{{ url_for('static', filename='informations.css') }}"/>
+{% endblock %}
+{% block main %}
+		<ul>
+		<a href="{{ url_for('afficherInformationsAlbums', num_album = informations.id) }}">
+			<li>
+				<p>{{ informations.title }}</p>
+				<img width="50%" src="{{ url_for('static', filename='Images/Album/'+informations.image)}}"alt="Image non trouvée">
+        <p>{{ informations.genre }}</p>
+        <p>{{ informations.dateSortie }}</p>
+			</li>
+		</a>
+		</ul>
+{% endblock %}
