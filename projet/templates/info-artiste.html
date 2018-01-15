@@ -5,9 +5,11 @@
 href="{{ url_for('static', filename='info-artiste.css') }}"/>
 {% endblock %}
 {% block main %}
+<section>
   <h1> Information </h1>
   <h2> {{ nomA }} </h1>
   <img width="20%" src="{{ url_for('static', filename='Images/Artiste/'+nomA+'.jpg')}}"alt="Image non trouvée">
+</section>
   <h4> Albums réalisés : </h4>
       {% for a in listeAlb %}
       <table>
@@ -17,5 +19,4 @@ href="{{ url_for('static', filename='info-artiste.css') }}"/>
         <td> Date de sortie : {{ a.dateSortie }}</td>
       </table>
       {% endfor %}
-</body>
 {% endblock %}

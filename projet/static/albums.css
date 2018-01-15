@@ -11,7 +11,11 @@ ul{
   flex-wrap: wrap;
   list-style: none;
 }
-li{
+.liste{
   padding-left: 2em;
-  flex: 1 1 0;
+  flex: 1 0 27%;
+}
+h1{
+  text-align: center;
+  color: grey;
 }
