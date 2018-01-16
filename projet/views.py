@@ -130,6 +130,12 @@ def profil(log):
 	listeP = get_playlists(log)
 	return render_template("profil.html",title="Profil", listeP = listeP)
 
+@app.route("/profil/")
+def profil_none():
+	return render_template("profil.html", title="Profil", listeP=[])
+
+
+
 @app.route("/profil/playlist/<idPlay>")
 def afficherPlaylist(idPlay):
 	listeR = get_musiques(idPlay)
