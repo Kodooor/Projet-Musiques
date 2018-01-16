@@ -162,6 +162,7 @@ def deconnexion():
 	logout_user()
 	return redirect(url_for('home'))
 
+
 @app.route("/profil/<log>")
 def profil(log):
 	listeP = get_playlists(log)
