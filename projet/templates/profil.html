@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block styles %}
 {{ super() }}
-<link rel="stylesheet"
-href="{{ url_for('static', filename='home.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='profil.css') }}"/>
 {% endblock %}
 {% block main %}
   {% if current_user.is_authenticated %}
