@@ -11,7 +11,10 @@ body{
   flex-wrap: wrap;
   list-style: none;
 }
-.liste{
+#li{
   padding-left: 2em;
-  flex: 1 0 27%;
+  flex: 1 1 0;
+}
+a{
+  text-align: center;
 }

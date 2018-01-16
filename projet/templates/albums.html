@@ -4,17 +4,16 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='albums.css') }}"/>
 {% endblock %}
 {% block main %}
-		<ul id="ul">
-=======
 <a class="nav-link" href="{{url_for('ajouterAlbum')}}">
 <input class="btn btn-default" type="submit" value="ajouter un album">
 </a>
-		<ul>
+		<ul id="ul">
 		{% for a in listeAlbum %}
+		
 		<a class="liste" href="{{ url_for('afficherInformationsAlbums', num_album = a.id) }}">
 			<li id="li">
 				<p>{{ a.titre }}</p>
-				<img width="80%" src="{{ url_for('static', filename='Images/Album/'+a.image)}}"alt="Image non trouvée">
+				<img width="130em" src="{{ url_for('static', filename='Images/Album/'+a.image)}}"alt="Image non trouvée">
 			</li>
 		</a>
 		{% endfor %}
