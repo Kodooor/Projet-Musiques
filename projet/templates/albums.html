@@ -5,6 +5,11 @@
 {% endblock %}
 {% block main %}
 		<ul id="ul">
+=======
+<a class="nav-link" href="{{url_for('ajouterAlbum')}}">
+<input class="btn btn-default" type="submit" value="ajouter un album">
+</a>
+		<ul>
 		{% for a in listeAlbum %}
 		<a class="liste" href="{{ url_for('afficherInformationsAlbums', num_album = a.id) }}">
 			<li id="li">

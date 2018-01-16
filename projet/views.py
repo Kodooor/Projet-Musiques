@@ -1,13 +1,16 @@
-from .app import app
-from flask import render_template
+from .app import *
+from flask import render_template, request
 from flask_wtf import FlaskForm
+from flask_wtf.file import FileField, FileRequired
 from wtforms import *
 from wtforms.validators import DataRequired
 from flask import url_for, redirect, request
-from .app import db
 from .models import *
 from hashlib import sha256
 from flask_login import login_user, current_user, login_required, logout_user
+from werkzeug.utils import secure_filename
+import os
+import shutil
 
 class LoginForm(FlaskForm):
 	next = HiddenField()
@@ -22,6 +25,12 @@ class LoginForm(FlaskForm):
 		m.update(self.password.data.encode())
 		qq = m.hexdigest()
 		return user if qq == user.password else None
+class CreerAlbumForm(FlaskForm):
+	titre = StringField('Titre :', validators=[DataRequired()])
+	genre = StringField('Genre :', validators=[DataRequired()])
+	dateSortie = StringField('Date de sortie :', validators=[DataRequired()])
+	image = FileField('Image :')
+	artiste = StringField('Artiste :', validators=[DataRequired()])
 
 class ChangerMdpForm(FlaskForm):
 	next = HiddenField()
@@ -60,6 +69,34 @@ def afficherInformationsAlbums(num_album):
 		"informations.html",
 		title="Info",
 		informations=informations, artiste=artiste)
+
+@app.route("/album/ajouter_album/", methods=("POST","GET"))
+def ajouterAlbum():
+	f = CreerAlbumForm()
+	user = current_user
+	if f.validate_on_submit():
+		if f.titre.data == "" or f.image.data == "" or f.artiste.data == "" or f.dateSortie.data == "" or os.path.exists(os.path.join(mkpath('static/Musique/'), f.titre.data)):
+			return render_template("ajouter_album.html", sujet="init", form=f, error=True)
+		else:
+			listeArtiste= Artiste.query.all()
+			ens_artiste_nom=set()
+			for a in listeArtiste:
+				ens_artiste_nom.add(a.nom)
+			if f.artiste.data not in ens_artiste_nom:
+				a=Artiste(nom=f.artiste.data)
+				db.session.add(a)
+				db.session.commit()
+			fichier= f.image.data
+			filename = secure_filename(fichier.filename)
+			fichier.save(os.path.join(mkpath('static/Images/Album/'), filename))
+			art = get_artiste_par_nom(f.artiste.data)
+			o = Album(genre = f.genre.data, image = filename, titre = f.titre.data, dateSortie = f.dateSortie.data, artiste_id = art[0].id)
+			db.session.add(o)
+			db.session.commit()
+			os.mkdir(os.path.join(mkpath('static/Musique/'),f.titre.data))
+		return redirect(url_for("home"))
+	return render_template("ajouter_album.html", sujet="init", form=f, error=True)
+
 
 @app.route("/artiste/<numero_page>")
 def afficherListeArtiste(numero_page):
@@ -124,6 +161,7 @@ def connexion():
 def deconnexion():
 	logout_user()
 	return redirect(url_for('home'))
+
 
 @app.route("/profil/<log>")
 def profil(log):

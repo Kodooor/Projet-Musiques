@@ -72,6 +72,9 @@ def get_artiste():
 def getNomArt(idA):
 	return Artiste.query.get(idA).nom
 
+def get_artiste_par_nom(nom):
+	return Artiste.query.filter(Artiste.nom == nom).all()
+
 def get_artiste_page(numero):
     debut = int(numero) * 6
     fin = int(numero) * 6 + 6
