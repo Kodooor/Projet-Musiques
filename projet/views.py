@@ -95,7 +95,7 @@ def ajouterAlbum():
 			db.session.commit()
 			os.mkdir(os.path.join(mkpath('static/Musique/'),f.titre.data))
 		return redirect(url_for("home"))
-	return render_template("ajouter_album.html", sujet="init", form=f, error=True)
+	return render_template("ajouter_album.html", sujet="init", form=f, error=True, title="Ajouter un album")
 
 
 @app.route("/artiste/<numero_page>")
