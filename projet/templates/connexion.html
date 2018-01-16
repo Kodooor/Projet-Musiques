@@ -18,6 +18,24 @@
 	<input class="btn btn-default" type="submit" value="Se connecter">
 	<a class="nav-link" href="{{url_for('creercompte')}}">Créer un compte</a>
 </form>
+{% elif sujet == 'Changer de mot de passe' %}
+<form role="form" method="POST"
+	action="{{ url_for('changermdp') }}">
+	{{ form.hidden_tag() }}
+	<div class={% if form.login.errors %}"form-group has-error"{% else %}"form-group"{% endif %}>
+	{{ form.login.label }} {{ form.login(size=50, class_="form-control") }}
+  {{ form.password.label }} {{ form.password(size=50, class_="form-control") }}
+	{{ form.newpassword.label }} {{ form.newpassword(size=50, class_="form-control") }}
+	</div>
+	{% if form.login.errors %}
+	<ul class="list-group">
+		{% for e in form.login.errors %}
+		<li class="list-group_item list-group-item-danger">{{ e }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+	<input class="btn btn-default" type="submit" value="Changer de mot de passe">
+</form>
 {% else %}
 <form role="form" method="POST"
 	action="{{ url_for('creercompte') }}">

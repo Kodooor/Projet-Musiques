@@ -26,7 +26,6 @@ class LoginForm(FlaskForm):
 		m.update(self.password.data.encode())
 		qq = m.hexdigest()
 		return user if qq == user.password else None
-
 class CreerAlbumForm(FlaskForm):
 	titre = StringField('Titre :', validators=[DataRequired()])
 	genre = StringField('Genre :', validators=[DataRequired()])
@@ -34,11 +33,26 @@ class CreerAlbumForm(FlaskForm):
 	image = FileField('Image :')
 	artiste = StringField('Artiste :', validators=[DataRequired()])
 
+class ChangerMdpForm(FlaskForm):
+	next = HiddenField()
+	login = StringField('Login :', validators=[DataRequired()])
+	password = PasswordField('Mot de passe actuel :', validators=[DataRequired()])
+	newpassword = PasswordField('Nouveau mot de passe :', validators=[DataRequired()])
+
+	def get_authenticated_user(self):
+		user = User.query.get(self.login.data)
+		if user is None:
+			return None
+		m = sha256()
+		m.update(self.password.data.encode())
+		qq = m.hexdigest()
+		return user if qq == user.password else None
+
 @app.route("/")
 def home():
 	return render_template(
 		"home.html",
-		title="Hello World!")
+		title="Accueil de iMusic")
 
 @app.route("/album/<numero_page>")
 def afficherListeAlbum(numero_page):
@@ -115,6 +129,21 @@ def creercompte():
 		return redirect(url_for('home'))
 	return render_template("connexion.html",sujet = "Creation de compte", form = f,title="Creation de compte")
 
+@app.route("/changermdp/", methods=("POST","GET"))
+def changermdp():
+	f = ChangerMdpForm()
+	if f.validate_on_submit():
+		user = f.get_authenticated_user()
+		if user:
+			m = sha256()
+			m.update(f.newpassword.data.encode())
+			qq = m.hexdigest()
+			user.login = f.login.data
+			user.password = qq
+			db.session.commit()
+			return redirect(url_for('home'))
+	return render_template("connexion.html", sujet = "Changer de mot de passe", form = f,title="Changer de mot de passe")
+
 @app.route("/connexion/", methods=("POST", "GET"))
 def connexion():
 	f = LoginForm()
@@ -132,6 +161,18 @@ def connexion():
 def deconnexion():
 	logout_user()
 	return redirect(url_for('home'))
+
+@app.route("/profil/<log>")
+def profil(log):
+	listeP = get_playlists(log)
+	return render_template("profil.html",title="Profil", listeP = listeP)
+
+@app.route("/profil/playlist/<idPlay>")
+def afficherPlaylist(idPlay):
+	listeR = get_musiques(idPlay)
+	return render_template("profil.html",title="Playlist", listeR = listeR)
+
+
 
 # import yaml, os.path
 #

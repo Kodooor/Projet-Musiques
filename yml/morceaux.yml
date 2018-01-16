@@ -1,0 +1,972 @@
+- albumId: 1
+  entryId: 1
+  title: How Many People
+  ficname: morceaux1.mp3
+- albumId: 1
+  entryId: 2
+  title: I'm Gonna Dance
+  ficname: morceaux2.mp3
+- albumId: 1
+  entryId: 3
+  title: Black Spoon
+  ficname: morceaux3.mp3
+- albumId: 1
+  entryId: 4
+  title: I Can't
+  ficname: morceaux4.mp3
+- albumId: 1
+  entryId: 5
+  title: Flowers
+  ficname: morceaux5.mp3
+- albumId: 1
+  entryId: 6
+  title: Real Love
+  ficname: morceaux6.mp3
+- albumId: 1
+  entryId: 7
+  title: Julia
+  ficname: morceaux7.mp3
+- albumId: 1
+  entryId: 8
+  title: My Man
+  ficname: morceaux8.mp3
+- albumId: 1
+  entryId: 9
+  title: It's Too Late
+  ficname: morceaux9.mp3
+- albumId: 1
+  entryId: 10
+  title: Who Are They
+  ficname: morceaux10.mp3
+- albumId: 1
+  entryId: 11
+  title: We've Got To
+  ficname: morceaux11.mp3
+- albumId: 1
+  entryId: 12
+  title: Before
+  ficname: morceaux12.mp3
+- albumId: 1
+  entryId: 13
+  title: It Hurt
+  ficname: morceaux13.mp3
+- albumId: 1
+  entryId: 14
+  title: Believe
+  ficname: morceaux14.mp3
+- albumId: 1
+  entryId: 15
+  title: I Want You Back
+  ficname: morceaux15.mp3
+- albumId: 2
+  entryId: 1
+  title: Fight Outta You
+  ficname: morceaux1.mp3
+- albumId: 2
+  entryId: 2
+  title: In The Colors
+  ficname: morceaux2.mp3
+- albumId: 2
+  entryId: 3
+  title: Fool FOr A Lonesome Train
+  ficname: morceaux3.mp3
+- albumId: 2
+  entryId: 4
+  title: Needed You Tonight
+  ficname: morceaux4.mp3
+- albumId: 2
+  entryId: 5
+  title: Having Wings
+  ficname: morceaux5.mp3
+- albumId: 2
+  entryId: 6
+  title: Say You Will
+  ficname: morceaux6.mp3
+- albumId: 2
+  entryId: 7
+  title: Younger Than Today
+  ficname: morceaux7.mp3
+- albumId: 2
+  entryId: 8
+  title: Put It On Me
+  ficname: morceaux8.mp3
+- albumId: 2
+  entryId: 9
+  title: Heart Of Matters
+  ficname: morceaux9.mp3
+- albumId: 2
+  entryId: 10
+  title: Paris Sunrise \#7
+  ficname: morceaux10.mp3
+- albumId: 2
+  entryId: 11
+  title: Lifeline
+  ficname: morceaux11.mp3
+- albumId: 3
+  entryId: 1
+  title: I Don't Know Why
+  ficname: morceaux1.mp3
+- albumId: 3
+  entryId: 2
+  title: Whatever It Takes
+  ficname: morceaux2.mp3
+- albumId: 3
+  entryId: 3
+  title: Believer
+  ficname: morceaux3.mp3
+- albumId: 3
+  entryId: 4
+  title: Walking the Wire
+  ficname: morceaux4.mp3
+- albumId: 3
+  entryId: 5
+  title: Rise Up
+  ficname: morceaux5.mp3
+- albumId: 3
+  entryId: 6
+  title: I'll Make It Up to You
+  ficname: morceaux6.mp3
+- albumId: 3
+  entryId: 7
+  title: Yesterday
+  ficname: morceaux7.mp3
+- albumId: 3
+  entryId: 8
+  title: Mouth of the River
+  ficname: morceaux8.mp3
+- albumId: 3
+  entryId: 9
+  title: Thunder
+  ficname: morceaux9.mp3
+- albumId: 3
+  entryId: 10
+  title: Start Over
+  ficname: morceaux10.mp3
+- albumId: 3
+  entryId: 11
+  title: Dancing in the Dark
+  ficname: morceaux11.mp3
+- albumId: 3
+  entryId: 12
+  title: Piste 12
+  ficname: morceaux12.mp3
+- albumId: 3
+  entryId: 13
+  title: Piste 13
+  ficname: morceaux13.mp3
+- albumId: 3
+  entryId: 14
+  title: Piste 14
+  ficname: morceaux14.mp3
+- albumId: 4
+  entryId: 1
+  title: Radioactive
+  ficname: morceaux1.mp3
+- albumId: 4
+  entryId: 2
+  title: Tiptoe
+  ficname: morceaux2.mp3
+- albumId: 4
+  entryId: 3
+  title: It's Time
+  ficname: morceaux3.mp3
+- albumId: 4
+  entryId: 4
+  title: Demons
+  ficname: morceaux4.mp3
+- albumId: 4
+  entryId: 5
+  title: On Top of the World
+  ficname: morceaux5.mp3
+- albumId: 4
+  entryId: 6
+  title: Amsterdam
+  ficname: morceaux6.mp3
+- albumId: 4
+  entryId: 7
+  title: Hear Me
+  ficname: morceaux7.mp3
+- albumId: 4
+  entryId: 8
+  title: Every Night
+  ficname: morceaux8.mp3
+- albumId: 4
+  entryId: 9
+  title: Bleeding Out
+  ficname: morceaux9.mp3
+- albumId: 4
+  entryId: 10
+  title: Underdog
+  ficname: morceaux10.mp3
+- albumId: 4
+  entryId: 11
+  title: Nothing Left to Say_Rocks
+  ficname: morceaux11.mp3
+- albumId: 4
+  entryId: 12
+  title: Cha-Ching (Till We Grow Older)
+  ficname: morceaux12.mp3
+- albumId: 4
+  entryId: 13
+  title: Working Man
+  ficname: morceaux13.mp3
+- albumId: 5
+  entryId: 1
+  title: Nwaar Is The New Black
+  ficname: morceaux1.mp3
+- albumId: 5
+  entryId: 2
+  title: QuedusaalVie
+  ficname: morceaux2.mp3
+- albumId: 5
+  entryId: 3
+  title: Mosaïque solitaire
+  ficname: morceaux3.mp3
+- albumId: 5
+  entryId: 4
+  title: Dieu ne ment jamais
+  ficname: morceaux4.mp3
+- albumId: 5
+  entryId: 5
+  title: Signaler
+  ficname: morceaux5.mp3
+- albumId: 5
+  entryId: 6
+  title: Kietu
+  ficname: morceaux6.mp3
+- albumId: 5
+  entryId: 7
+  title: Gova
+  ficname: morceaux7.mp3
+- albumId: 5
+  entryId: 8
+  title: Macarena
+  ficname: morceaux8.mp3
+- albumId: 5
+  entryId: 9
+  title: Peur d'être père
+  ficname: morceaux9.mp3
+- albumId: 5
+  entryId: 10
+  title: Kin la belle
+  ficname: morceaux10.mp3
+- albumId: 5
+  entryId: 11
+  title: Lové
+  ficname: morceaux11.mp3
+- albumId: 5
+  entryId: 12
+  title: Noob Saibot
+  ficname: morceaux12.mp3
+- albumId: 5
+  entryId: 13
+  title: J Respect R
+  ficname: morceaux13.mp3
+- albumId: 5
+  entryId: 14
+  title: Une âme pour deux
+  ficname: morceaux14.mp3
+- albumId: 6
+  entryId: 1
+  title: San
+  ficname: morceaux1.mp3
+- albumId: 6
+  entryId: 2
+  title: La fête est finie
+  ficname: morceaux2.mp3
+- albumId: 6
+  entryId: 3
+  title: Basique
+  ficname: morceaux3.mp3
+- albumId: 6
+  entryId: 4
+  title: Tout va bien
+  ficname: morceaux4.mp3
+- albumId: 6
+  entryId: 5
+  title: Défaite de famille
+  ficname: morceaux5.mp3
+- albumId: 6
+  entryId: 6
+  title: La lumière
+  ficname: morceaux6.mp3
+- albumId: 6
+  entryId: 7
+  title: Bonne Meuf
+  ficname: morceaux7.mp3
+- albumId: 6
+  entryId: 8
+  title: Quand est-ce que ça s'arrête
+  ficname: morceaux8.mp3
+- albumId: 6
+  entryId: 9
+  title: Christophe(ft. Maitre Gims)
+  ficname: morceaux9.mp3
+- albumId: 6
+  entryId: 10
+  title: Zone(ft. Nekfeu & Dizzee Rascal)
+  ficname: morceaux10.mp3
+- albumId: 6
+  entryId: 11
+  title: Dans ma ville on traîne
+  ficname: morceaux11.mp3
+- albumId: 6
+  entryId: 12
+  title: La pluie(ft. Stromae)
+  ficname: morceaux12.mp3
+- albumId: 6
+  entryId: 13
+  title: Paradis
+  ficname: morceaux13.mp3
+- albumId: 6
+  entryId: 14
+  title: Notes pour trop tard (ft. Ibeyi
+  ficname: morceaux14.mp3
+- albumId: 7
+  entryId: 1
+  title: Rolling In The Deep
+  ficname: Rolling In The Deep.m4a
+- albumId: 7
+  entryId: 2
+  title: Rumor Has it
+  ficname: Rumor Has It.m4a
+- albumId: 7
+  entryId: 3
+  title: Turning Tabels
+  ficname: Turning Tabels.m4a
+- albumId: 7
+  entryId: 4
+  title: Don't You Remember
+  ficname: (04) Adele - Don't You Remember.m4a
+- albumId: 7
+  entryId: 5
+  title: Set Fire To The Rain
+  ficname: (05) Adele - Set Fire To The Rain.m4a
+- albumId: 7
+  entryId: 6
+  title: He Won't Go
+  ficname: (06) Adele - He Won't Go.m4a
+- albumId: 7
+  entryId: 7
+  title: Take It All
+  ficname: (07) Adele - Take It All.m4a
+- albumId: 7
+  entryId: 8
+  title: I'll Be Waiting
+  ficname: (08) Adele - I'll Be Waiting.m4a
+- albumId: 7
+  entryId: 9
+  title: One And Only
+  ficname: (09) Adele - One And Only.m4a
+- albumId: 7
+  entryId: 10
+  title: Lovesong
+  ficname: (10) Adele - Lovesong.m4a
+- albumId: 7
+  entryId: 11
+  title: Someone Like You
+  ficname: (11) Adele - Someone Like You.m4a
+- albumId: 7
+  entryId: 12
+  title: If It Hadn't Been For Love
+  ficname: (12) Adele - If It Hadn't Been For Love.m4a
+- albumId: 7
+  entryId: 13
+  title: Hiding My Heart
+  ficname: (13) Adele - Hiding My Heart.m4a
+- albumId: 8
+  entryId: 1
+  title: Our Day Will Come
+  ficname: 01 Our Day Will Come.mp3
+- albumId: 8
+  entryId: 2
+  title: Between the Cheats
+  ficname: 02 Between the Cheats.mp3
+- albumId: 8
+  entryId: 3
+  title: Tears Dry
+  ficname: 03 Tears Dry [Original Version].mp3
+- albumId: 8
+  entryId: 4
+  title: Will You Still Love Me Tomorrow
+  ficname: 04 Will You Still Love Me Tomorrow_ [2011].mp3
+- albumId: 8
+  entryId: 5
+  title: Like Smoke
+  ficname: 05 Like Smoke.mp3
+- albumId: 8
+  entryId: 6
+  title: Valerie
+  ficname: 06 Valerie ['68 Version].mp3
+- albumId: 8
+  entryId: 7
+  title: The Girl from Ipanema
+  ficname: 07 The Girl from Ipanema.mp3
+- albumId: 8
+  entryId: 8
+  title: Halftime
+  ficname: 08 Halftime.mp3
+- albumId: 8
+  entryId: 9
+  title: Wake Up Alone
+  ficname: 09 Wake Up Alone [Original Recording].mp3
+- albumId: 8
+  entryId: 10
+  title: Best Friends, Right
+  ficname: 10 Best Friends, Right_.mp3
+- albumId: 8
+  entryId: 11
+  title: Body & Soul
+  ficname: 11 Body & Soul.mp3
+- albumId: 8
+  entryId: 12
+  title: A Song for You
+  ficname: 12 A Song for You.mp3
+- albumId: 9
+  entryId: 1
+  title: Her Eyes Are Underneath The Ground
+  ficname: 01 Her Eyes Are Underneath The Ground.mp3
+- albumId: 9
+  entryId: 2
+  title: Epilepsy Is Dancing
+  ficname: 02 Epilepsy Is Dancing.mp3
+- albumId: 9
+  entryId: 3
+  title: One Dove
+  ficname: 03 One Dove.mp3
+- albumId: 9
+  entryId: 4
+  title: Kiss My Name
+  ficname: 04 Kiss My Name.mp3
+- albumId: 9
+  entryId: 5
+  title: The Crying Light
+  ficname: 05 The Crying Light.mp3
+- albumId: 9
+  entryId: 6
+  title: Another World
+  ficname: 06 Another World.mp3
+- albumId: 9
+  entryId: 7
+  title: Daylight And The Sun
+  ficname: 07 Daylight And The Sun.mp3
+- albumId: 9
+  entryId: 8
+  title: Aeon
+  ficname: 08 Aeon.mp3
+- albumId: 9
+  entryId: 9
+  title: Dust And Water
+  ficname: 09 Dust And Water.mp3
+- albumId: 9
+  entryId: 10
+  title: Everglade
+  ficname: 10 Everglade.mp3
+- albumId: 10
+  entryId: 1
+  title: Brianstorm
+  ficname: Brianstorm.mp3
+- albumId: 10
+  entryId: 2
+  title: Teddy Picker
+  ficname: Teddy Picker.mp3
+- albumId: 10
+  entryId: 3
+  title: D Is For Dangerous
+  ficname: D Is For Dangerous.mp3
+- albumId: 10
+  entryId: 4
+  title: Balaclava
+  ficname: Balaclava.mp3
+- albumId: 10
+  entryId: 5
+  title: Fluorescent Adolescent
+  ficname: Fluorescent Adolescent.mp3
+- albumId: 10
+  entryId: 6
+  title: Do Me A Favour
+  ficname: Do Me A Favour.mp3
+- albumId: 10
+  entryId: 7
+  title: This House Is A Circus
+  ficname: This House Is A Circus.mp3
+- albumId: 10
+  entryId: 8
+  title: If You Were There, Beware
+  ficname: If You Were There, Beware.mp3
+- albumId: 10
+  entryId: 9
+  title: The Bad Thing
+  ficname: The Bad Thing.mp3
+- albumId: 10
+  entryId: 10
+  title: Old Yellow Bricks
+  ficname: Old Yellow Bricks.mp3
+- albumId: 10
+  entryId: 11
+  title: 505
+  ficname: 505.mp3
+- albumId: 11
+  entryId: 1
+  title: Boogie man skank
+  ficname: 01. Boogie man skank.mp3
+- albumId: 11
+  entryId: 2
+  title: Don't stop jammin'
+  ficname: 02. Don't stop jammin'.mp3
+- albumId: 11
+  entryId: 3
+  title: Full time
+  ficname: 03. Full time.mp3
+- albumId: 11
+  entryId: 4
+  title: Natural resource
+  ficname: 04. Natural resource.mp3
+- albumId: 11
+  entryId: 5
+  title: Snap back
+  ficname: 05. Snap back.mp3
+- albumId: 11
+  entryId: 6
+  title: Zip bag
+  ficname: 06. Zip bag.mp3
+- albumId: 11
+  entryId: 7
+  title: Good morning midnight
+  ficname: 07. Good morning midnight.mp3
+- albumId: 11
+  entryId: 8
+  title: Dewey like this
+  ficname: 08. Dewey like this.mp3
+- albumId: 11
+  entryId: 9
+  title: Holidays hold up
+  ficname: 09. Holidays hold up.mp3
+- albumId: 11
+  entryId: 10
+  title: Wild world
+  ficname: 10. Wild world.mp3
+- albumId: 11
+  entryId: 11
+  title: Gutta love
+  ficname: 11. Gutta love.mp3
+- albumId: 11
+  entryId: 12
+  title: Confession
+  ficname: 12. Confession.mp3
+- albumId: 11
+  entryId: 13
+  title: Mi nah easy
+  ficname: 13. Mi nah easy.mp3
+- albumId: 11
+  entryId: 14
+  title: Cheese cake
+  ficname: 14. Cheese cake.mp3
+- albumId: 11
+  entryId: 15
+  title: Big city dweller ft Potential Kid
+  ficname: 15. Big city dweller feat. Potential Kid.mp3
+- albumId: 11
+  entryId: 16
+  title: Buck a shot
+  ficname: 16. Buck a shot.mp3
+- albumId: 11
+  entryId: 17
+  title: Kingston chronic
+  ficname: 17. Kingston chronic.mp3
+- albumId: 11
+  entryId: 18
+  title: Bad to the bone
+  ficname: 18. Bad to the bone.mp3
+- albumId: 11
+  entryId: 19
+  title: Bubble like Perrier
+  ficname: 19. Bubble like Perrier.mp3
+- albumId: 11
+  entryId: 20
+  title: This wall will fall
+  ficname: 20. This wall will fall.mp3
+- albumId: 11
+  entryId: 21
+  title: Dub Attack Ft Kanka
+  ficname: 21. Dub Attack Feat Kanka.mp3
+- albumId: 12
+  entryId: 1
+  title: Is This Love
+  ficname: Bob Marley & The Wailers - 01 - Is This Love.mp3
+- albumId: 12
+  entryId: 2
+  title: No Woman No Cry
+  ficname: Bob Marley & The Wailers - 02 - No Woman No Cry.mp3
+- albumId: 12
+  entryId: 3
+  title: Could  You Be Loved
+  ficname: Bob Marley & The Wailers - 03 - Could  You Be Loved.mp3
+- albumId: 12
+  entryId: 4
+  title: Three Little Birds
+  ficname: Bob Marley & The Wailers - 04 - Three Little Birds.mp3
+- albumId: 12
+  entryId: 5
+  title: Buffalo Soldier
+  ficname: Bob Marley & The Wailers - 05 - Buffalo Soldier.mp3
+- albumId: 12
+  entryId: 6
+  title: Get Up Stand Up
+  ficname: Bob Marley & The Wailers - 06 - Get Up Stand Up.mp3
+- albumId: 12
+  entryId: 7
+  title: Stir It Up
+  ficname: Bob Marley & The Wailers - 07 - Stir It Up.mp3
+- albumId: 12
+  entryId: 8
+  title: One Love , People Get Ready
+  ficname: Bob Marley & The Wailers - 08 - One Love , People Get Ready.mp3
+- albumId: 12
+  entryId: 9
+  title: I Shot the Sheriff
+  ficname: Bob Marley & The Wailers - 09 - I Shot the Sheriff.mp3
+- albumId: 12
+  entryId: 10
+  title: Waiting in Vain
+  ficname: Bob Marley & The Wailers - 10 - Waiting in Vain.mp3
+- albumId: 12
+  entryId: 11
+  title: Redemption Song
+  ficname: Bob Marley & The Wailers - 11 - Redemption Song.mp3
+- albumId: 12
+  entryId: 12
+  title: Satisfy My Soul
+  ficname: Bob Marley & The Wailers - 12 - Satisfy My Soul.mp3
+- albumId: 12
+  entryId: 13
+  title: Exodus
+  ficname: Bob Marley & The Wailers - 13 - Exodus.mp3
+- albumId: 12
+  entryId: 14
+  title: Jamming
+  ficname: Bob Marley & The Wailers - 14 - Jamming.mp3
+- albumId: 13
+  entryId: 1
+  title: Grenade
+  ficname: Grenade.mp3
+- albumId: 13
+  entryId: 2
+  title: Just The Way You Are
+  ficname: Just The Way You Are.mp3
+- albumId: 13
+  entryId: 3
+  title: Our First Time
+  ficname: Our First Time.mp3
+- albumId: 13
+  entryId: 4
+  title: Runaway Baby
+  ficname: Runaway Baby.mp3
+- albumId: 13
+  entryId: 5
+  title: The Lazy Song
+  ficname: The Lazy Song.mp3
+- albumId: 13
+  entryId: 6
+  title: Marry You
+  ficname: Marry You.mp3
+- albumId: 13
+  entryId: 7
+  title: Talking To The Moon
+  ficname: Talking To The Moon.mp3
+- albumId: 13
+  entryId: 8
+  title: Liquor Store Blues ft Damian Marley
+  ficname: Liquor Store Blues (Feat. Damian Marley).mp3
+- albumId: 13
+  entryId: 9
+  title: Count On Me
+  ficname: Count On Me.mp3
+- albumId: 13
+  entryId: 10
+  title: The Other Side ft Cee Lo Green & B.o.B
+  ficname: The Other Side (Feat. Cee Lo Green & B.o.B).mp3
+- albumId: 14
+  entryId: 1
+  title: The Cell
+  ficname: 01 - The Cell.mp3
+- albumId: 14
+  entryId: 2
+  title: Down The Road
+  ficname: 02 - Down The Road.mp3
+- albumId: 14
+  entryId: 3
+  title: Kings Season Ft Blitz The Ambassador And Ledeunff
+  ficname: 03 - Kings Season Feat Blitz The Ambassador And Ledeunff.mp3
+- albumId: 14
+  entryId: 4
+  title: Because Of You Ft Pigeon John
+  ficname: 04 - Because Of You Feat Pigeon John.mp3
+- albumId: 14
+  entryId: 5
+  title: Delta
+  ficname: 05 - Delta.mp3
+- albumId: 14
+  entryId: 6
+  title: Who Are You Ft Olivier Daysoul
+  ficname: 06 - Who Are You Feat Olivier Daysoul.mp3
+- albumId: 14
+  entryId: 7
+  title: Happy Ft Derek Martin
+  ficname: 07 - Happy Feat Derek Martin.mp3
+- albumId: 14
+  entryId: 8
+  title: Give Up The Ghost Ft Jay-Jay Johanson
+  ficname: 08 - Give Up The Ghost Feat Jay-Jay Johanson.mp3
+- albumId: 14
+  entryId: 9
+  title: The Beat
+  ficname: 09 - The Beat.mp3
+- albumId: 14
+  entryId: 10
+  title: Genius Ft Gush
+  ficname: 10 - Genius Feat Gush.mp3
+- albumId: 14
+  entryId: 11
+  title: Together Ft Blitz The Ambassador And Ledeunff
+  ficname: 11 - Togethe rFeat Blitz The Ambassador And Ledeunff.mp3
+- albumId: 14
+  entryId: 12
+  title: Arcades
+  ficname: 12 - Arcades.mp3
+- albumId: 14
+  entryId: 13
+  title: Le Banquet Ft Kentaro And Netik And Rafik And Tigerstyle And Vajra
+  ficname: 13 - Le Banquet Feat Kentaro And Netik And Rafik And Tigerstyle And Vajra.mp3
+- albumId: 14
+  entryId: 14
+  title: F.U.Y.A.
+  ficname: 14 - F.U.Y.A..mp3
+- albumId: 15
+  entryId: 1
+  title: Eraser
+  ficname: Ed Sheeran - Eraser [Official Audio].mp3
+- albumId: 15
+  entryId: 2
+  title: Castle On The Hill
+  ficname: Ed Sheeran - Castle On The Hill [Official Lyric Video].mp3
+- albumId: 15
+  entryId: 3
+  title: Dive
+  ficname: Ed Sheeran - Dive [Official Audio].mp3
+- albumId: 15
+  entryId: 4
+  title: Shape Of You
+  ficname: Ed Sheeran - Shape Of You [Official Lyric Video].mp3
+- albumId: 15
+  entryId: 5
+  title: Perfect
+  ficname: Ed Sheeran - Perfect [Official Audio].mp3
+- albumId: 15
+  entryId: 6
+  title: Galway Girl
+  ficname: Ed Sheeran - Galway Girl [Official Video].mp3
+- albumId: 15
+  entryId: 7
+  title: Happier
+  ficname: Ed Sheeran - Happier [Official Audio].mp3
+- albumId: 15
+  entryId: 8
+  title: New Man
+  ficname: Ed Sheeran - New Man [Official Audio].mp3
+- albumId: 15
+  entryId: 9
+  title: Hearts Don't Break Round Here
+  ficname: Ed Sheeran - Hearts Don't Break Round Here [Official Audio].mp3
+- albumId: 15
+  entryId: 10
+  title: What Do I Know
+  ficname: Ed Sheeran - What Do I Know [Official Audio].mp3
+- albumId: 15
+  entryId: 11
+  title: How Would You Feel
+  ficname: Ed Sheeran - How Would You Feel (Paean) [Official Audio].mp3
+- albumId: 15
+  entryId: 12
+  title: Supermarket Flowers
+  ficname: Ed Sheeran - Supermarket Flowers [Official Audio].mp3
+- albumId: 15
+  entryId: 13
+  title: Barcelona
+  ficname: Ed Sheeran - Barcelona [Official Audio].mp3
+- albumId: 15
+  entryId: 14
+  title: Bibia Ye Ye
+  ficname: Ed Sheeran - Bibia Ye Ye [Official Audio].mp3
+- albumId: 15
+  entryId: 15
+  title: Nancy Mulligan
+  ficname: Ed Sheeran - Nancy Mulligan [Official Audio].mp3
+- albumId: 15
+  entryId: 16
+  title: Save Myself
+  ficname: Ed Sheeran - Save Myself [Official Audio].mp3
+- albumId: 16
+  entryId: 1
+  title: Marly-Gomont
+  ficname: 01 Marly-Gomont.mp3
+- albumId: 16
+  entryId: 2
+  title: Un Petit Coup de Motherfuck
+  ficname: 02 Un Petit Coup de Motherfuck.mp3
+- albumId: 16
+  entryId: 3
+  title: Psychostar Show
+  ficname: 03 Psychostar Show.mp3
+- albumId: 16
+  entryId: 4
+  title: Chevalier
+  ficname: 04 Chevalier.mp3
+- albumId: 16
+  entryId: 5
+  title: Frustation
+  ficname: 05 Frustration.mp3
+- albumId: 16
+  entryId: 6
+  title: Bien Gamin
+  ficname: 06 Bien Gamin.mp3
+- albumId: 16
+  entryId: 7
+  title: J'Suis Blanc
+  ficname: 07 J'Suis Blanc.mp3
+- albumId: 16
+  entryId: 8
+  title: Psychostar World
+  ficname: 08 Psychostar World.mp3
+- albumId: 16
+  entryId: 9
+  title: Schizophrene
+  ficname: 09 Schizophrene.mp3
+- albumId: 16
+  entryId: 10
+  title: Faisons Quequette
+  ficname: 10 Faisons Quequette.mp3
+- albumId: 16
+  entryId: 11
+  title: Le Deni
+  ficname: 11 Le Deni.mp3
+- albumId: 16
+  entryId: 12
+  title: 12 Petits Patelins
+  ficname: 12 Petits Patelins.mp3
+- albumId: 17
+  entryId: 1
+  title: Ten Thousand Hours
+  ficname: Macklemore X Ryan Lewis - Ten Thousand Hours.mp3
+- albumId: 17
+  entryId: 2
+  title: Can't Hold Us ft Ray Dalton
+  ficname: Macklemore X Ryan Lewis - Can't Hold Us (feat. Ray Dalton).mp3
+- albumId: 17
+  entryId: 3
+  title: Thrift Shop ft Wanz
+  ficname: Macklemore X Ryan Lewis - Thrift Shop (feat. Wanz).mp3
+- albumId: 17
+  entryId: 4
+  title: Thin Line  ft Buffalo
+  ficname: Macklemore X Ryan Lewis - Thin Line (feat. Buffalo Madonna).mp3
+- albumId: 17
+  entryId: 5
+  title: Same Love ft Mary Lambert
+  ficname: Macklemore X Ryan Lewis - Same Love (feat. Mary Lambert).mp3
+- albumId: 17
+  entryId: 6
+  title: Make the Money
+  ficname: Macklemore X Ryan Lewis - Make the Money.mp3
+- albumId: 17
+  entryId: 7
+  title: Neon Cathedral ft Allen Stone
+  ficname: Macklemore X Ryan Lewis - Neon Cathedral (feat. Allen Stone.mp3
+- albumId: 17
+  entryId: 8
+  title: BomBom ft The Teaching
+  ficname: Macklemore X Ryan Lewis - BomBom (feat. The Teaching).mp3
+- albumId: 17
+  entryId: 9
+  title: White Walls
+  ficname: Macklemore X Ryan Lewis - White Walls (feat. ScHoolboy Q &.mp3
+- albumId: 17
+  entryId: 10
+  title: Jimmy Iovine ft Ab-Soul
+  ficname: Macklemore X Ryan Lewis - Jimmy Iovine (feat. Ab-Soul).mp3
+- albumId: 17
+  entryId: 11
+  title: Wing$
+  ficname: Macklemore X Ryan Lewis - Wing$.mp3
+- albumId: 17
+  entryId: 12
+  title: A Wake ft Evan Roman
+  ficname: Macklemore X Ryan Lewis - A Wake (feat. Evan Roman).mp3
+- albumId: 17
+  entryId: 13
+  title: Gold ft Eighty 4 fly
+  ficname: Macklemore X Ryan Lewis - Gold (feat. Eighty4 Fly).mp3
+- albumId: 17
+  entryId: 14
+  title: Cowboy Boots
+  ficname: Macklemore X Ryan Lewis - Cowboy Boots.mp3
+- albumId: 17
+  entryId: 15
+  title: Castle
+  ficname: Macklemore X Ryan Lewis - Castle.mp3
+- albumId: 17
+  entryId: 16
+  title: My Oh My
+  ficname: Macklemore X Ryan Lewis - My Oh My.mp3
+- albumId: 17
+  entryId: 17
+  title: Victory Lap
+  ficname: Macklemore X Ryan Lewis - Victory Lap.mp3
+- albumId: 17
+  entryId: 18
+  title: Irish celebration
+  ficname: Macklemore X Ryan Lewis - Irish celebration.mp3
+- albumId: 18
+  entryId: 1
+  title: Uptown's First Finale ft Stevie Wonder & Andrew Wyatt
+  ficname: 01 - Uptown's First Finale (featuring Stevie Wonder & Andrew Wyatt).mp3
+- albumId: 18
+  entryId: 2
+  title: Summer Breaking ft Kevin Parker
+  ficname: 02 - Summer Breaking (featuring Kevin Parker).mp3
+- albumId: 18
+  entryId: 3
+  title: Feel Right ft Mystikal
+  ficname: 03 - Feel Right (featuring Mystikal).mp3
+- albumId: 18
+  entryId: 4
+  title: Uptown Funk ft Bruno Mars
+  ficname: 04 - Uptown Funk (featuring Bruno Mars).mp3
+- albumId: 18
+  entryId: 5
+  title: I Can't Lose ft Keyone Starr
+  ficname: 05 - I Can't Lose (featuring Keyone Starr).mp3
+- albumId: 18
+  entryId: 6
+  title: Daffodils ft Kevin Parker
+  ficname: 06 - Daffodils (featuring Kevin Parker).mp3
+- albumId: 18
+  entryId: 7
+  title: Crack in the Pearl ft Andrew Wyatt
+  ficname: 07 - Crack in the Pearl (featuring Andrew Wyatt).mp3
+- albumId: 18
+  entryId: 8
+  title: In Case of Fire ft Jeff Bhasker
+  ficname: 08 - In Case of Fire (featuring Jeff Bhasker).mp3
+- albumId: 18
+  entryId: 9
+  title: Leaving Los Feliz ft Kevin Parker
+  ficname: 09 - Leaving Los Feliz (featuring Kevin Parker).mp3
+- albumId: 18
+  entryId: 10
+  title: Heavy and Rolling ft Andrew Wyatt
+  ficname: 10 - Heavy and Rolling (featuring Andrew Wyatt).mp3
+- albumId: 18
+  entryId: 11
+  title: Crack in the Pearl
+  ficname: 11 - Crack in the Pearl, Pt. II (featuring Stevie Wonder and Jeff Bhasker).mp3

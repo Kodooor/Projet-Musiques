@@ -18,6 +18,32 @@ class Album(db.Model):
 	artiste_id = db.Column(db.Integer, db.ForeignKey("artiste.id"))
 	artiste = db.relationship("Artiste", backref=db.backref("artiste", lazy="dynamic"))
 
+class User(db.Model, UserMixin):
+	login = db.Column(db.String(50), primary_key=True)
+	password = db.Column(db.String(50))
+
+	def get_id(self):
+		return self.login
+
+class Musique(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	titre = db.Column(db.String(100))
+	nom_de_fichier = db.Column(db.String(100))
+	album_id = db.Column(db.Integer, db.ForeignKey("album.id"))
+	album = db.relationship("Album", backref=db.backref("album", lazy="dynamic"))
+
+class Playlist(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	titre = db.Column(db.String(100))
+	user_login = db.Column(db.Integer, db.ForeignKey("user.login"))
+	user = db.relationship("User", backref=db.backref("user", lazy="dynamic"))
+
+class RelationPM(db.Model):
+	musique_id = db.Column(db.Integer, db.ForeignKey("musique.id"), primary_key=True)
+	musique = db.relationship("Musique", backref=db.backref("musique", lazy="dynamic"))
+	playlist_id = db.Column(db.Integer, db.ForeignKey("playlist.id"), primary_key=True)
+	playlist = db.relationship("Playlist", backref=db.backref("playlist", lazy="dynamic"))
+
 # GESTION DES ALBUMS
 
 def get_la_liste_album():
@@ -71,6 +97,30 @@ def get_artiste_albums(art):
 						liste.append(b)
 	return liste
 
+# GESTION DES PLAYLISTS
+def get_playlists(login):
+	return Playlist.query.filter(Playlist.user_login == login).all()
+	# listeU = User.query.all()
+	# listeP = Playlist.query.all()
+	# listeRep = []
+	# for u in listeU:
+	# 	if u.login == login:
+	# 		for p in listeP:
+	# 			if p.user_login == u.login :
+	# 				listeRep.append(p)
+	# return listeRep
+
+def get_musiques(idP):
+	listeR = RelationPM.query.all()
+	listeM = Musique.query.all()
+	listeRep = []
+	for r in listeR:
+		if r.playlist_id == idP:
+			for m in listeM:
+				if r.musique_id == m.id :
+					listeRep.append(r)
+	return listeRep
+
 
 @login_manager.user_loader
 def load_user(username):
@@ -86,12 +136,3 @@ def get_user(login):
 # 	for artiste in query :
 # 	album = Artiste.filter_by(artiste_id=id)
 # 	return
-
-
-
-class User(db.Model, UserMixin):
-	login = db.Column(db.String(50), primary_key=True)
-	password = db.Column(db.String(50))
-
-	def get_id(self):
-		return self.login

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet"
+href="{{ url_for('static', filename='home.css') }}"/>
+{% endblock %}
+{% block main %}
+  {% if current_user.is_authenticated %}
+    <h2> Profil de {{ current_user.login}}</h2>
+
+    <div class='changerMdp'>
+      <a class="nav-link" href="{{url_for('changermdp')}}">Changer mon mot de passe</a>
+    </div>
+    {% if title == 'Profil' %}
+    <div class='playlists'>
+      <h3> Mes playlists </h3>
+      <ul>
+        {% for r in listeP %}
+          <li>
+            <a href="{{url_for('afficherPlaylist', idPlay= r.id )}}">
+            <p>{{ r.titre }}</p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% else %}
+    <div class='playlists'>
+      <h3> Les musiques de la playlist : </h3>
+      <ul>
+        {% for r in listeR %}
+          <li>
+            <p>{{ r.titre }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {%endif%}
+
+
+
+
+  {% else %}
+    <h2> Voulez vous créer un compte ? </h2>
+    <a class="nav-link" href="{{url_for('creercompte')}}">Créer un compte</a>
+
+
+  {% endif %}
+{% endblock %}
