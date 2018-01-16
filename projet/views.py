@@ -9,7 +9,6 @@ from .models import *
 from hashlib import sha256
 from flask_login import login_user, current_user, login_required, logout_user
 
-
 class LoginForm(FlaskForm):
 	next = HiddenField()
 	login = StringField('Login :', validators=[DataRequired()])

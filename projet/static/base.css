@@ -14,11 +14,12 @@ h1{
 }
 #co1{
   display : inline-flex;
+  flex-wrap: nowrap;
 }
 #co2{
   flex-wrap: nowrap;
   height: 2.2em;
   width: 30em;
-  margin-left: 30%;
+  margin-left: 2%;
 
 }
