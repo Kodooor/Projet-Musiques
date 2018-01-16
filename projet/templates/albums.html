@@ -5,10 +5,10 @@
 href="{{ url_for('static', filename='albums.css') }}"/>
 {% endblock %}
 {% block main %}
-		<ul>
+		<ul id="ul">
 		{% for a in listeAlbum %}
 		<a class="liste" href="{{ url_for('afficherInformationsAlbums', num_album = a.id) }}">
-			<li>
+			<li id="li">
 				<p>{{ a.titre }}</p>
 				<img width="80%" src="{{ url_for('static', filename='Images/Album/'+a.image)}}"alt="Image non trouvée">
 			</li>

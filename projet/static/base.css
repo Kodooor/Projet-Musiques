@@ -1,0 +1,24 @@
+h1{
+  text-align: center;
+}
+#bien{
+  text-align: center;
+}
+#co{
+  display : inline-flex;
+  flex-wrap: nowrap;
+  height: 2.2em;
+  width: 30em;
+  margin-left: 47%;
+  
+}
+#co1{
+  display : inline-flex;
+}
+#co2{
+  flex-wrap: nowrap;
+  height: 2.2em;
+  width: 30em;
+  margin-left: 30%;
+
+}

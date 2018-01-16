@@ -5,13 +5,13 @@
 body{
   padding-top: 10em;
 }
-ul{
+#ul{
   padding-top: 2em;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
-li{
+#li{
   padding-left: 2em;
   flex: 1 1 0;
 }
