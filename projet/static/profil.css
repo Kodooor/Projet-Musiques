@@ -11,3 +11,6 @@ body{
   padding-left: 2em;
   flex: 1 0 27%;
 }
+h2{
+  text-align: center;
+}

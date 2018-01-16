@@ -56,10 +56,11 @@ def afficherListeAlbum(numero_page):
 @app.route("/album/informations/<num_album>")
 def afficherInformationsAlbums(num_album):
 	informations = get_album(num_album)
+	artiste = getNomArt(informations.artiste_id)
 	return render_template(
 		"informations.html",
 		title="Info",
-		informations=informations)
+		informations=informations, artiste=artiste)
 
 @app.route("/artiste/<numero_page>")
 def afficherListeArtiste(numero_page):
@@ -139,6 +140,9 @@ def profil_none():
 @app.route("/profil/playlist/<idPlay>")
 def afficherPlaylist(idPlay):
 	listeR = get_musiques(idPlay)
+	print("ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp")
+	print(idPlay)
+	print(listeR)
 	return render_template("profil.html",title="Playlist", listeR = listeR)
 
 
