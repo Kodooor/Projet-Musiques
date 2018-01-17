@@ -48,6 +48,13 @@ class ChangerMdpForm(FlaskForm):
 		qq = m.hexdigest()
 		return user if qq == user.password else None
 
+class ChangerAlbumForm(FlaskForm):
+	titre = StringField('Titre :', validators=[DataRequired()])
+	genre = StringField('Genre :', validators=[DataRequired()])
+	dateSortie = StringField('Date de sortie :', validators=[DataRequired()])
+	image = FileField('Image :')
+	artiste = StringField('Artiste :', validators=[DataRequired()])
+
 @app.route("/")
 def home():
 	return render_template(
@@ -70,6 +77,21 @@ def afficherInformationsAlbums(num_album):
 		title="Info",
 		informations=informations)
 
+@app.route("/album/informations/editer_album/<num_album>")
+def editer_album(num_album):
+	f = ChangerAlbumForm()
+	if f.validate_on_submit():
+		user = f.get_authenticated_user()
+		if user:
+			album = get_album(num_album)
+			album.titre = f.titre.data
+			album.genre = f.genre.data
+			album.dateSortie = f.dateSortie.data
+			album.image = f.image.data
+			album.artiste = f.artiste.data
+			db.session.commit()
+			return redirect(url_for('/album/informations/<num_album>'))
+		return render_template("editer_album", sujet = "Editer les informations de l'album", form = f, title="Changer les infomations de l'album")
 @app.route("/album/ajouter_album/", methods=("POST","GET"))
 def ajouterAlbum():
 	f = CreerAlbumForm()
