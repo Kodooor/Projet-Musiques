@@ -16,5 +16,30 @@
 			</li>
 		</a>
 		{% endfor %}
+	</ul>
+	<section class="button-listing">
+		{% if pageActuelle == "0" %}
+		<form class="form-listing" method="POST" action="#">
+	<button class="disableb" type="button" disabled>Page précédente</button>
+	</form>
+	{% else %}
+	<form class="form-listing" method="POST" action="{{ url_for('afficherListeAlbum', numero_page=(pageActuelle | int)-1) }}">
+		<button class="activeb" type="submit">Page précédente</button>
+	</form>
+	{% endif %}
+	<form class="form-listing" method="POST" action="{{ url_for('afficherListeAlbum', numero_page=pageActuelle) }}">
+	<button class="activeb" type="submit">Page actuelle : {{(pageActuelle | int)}}</button>
+	</form>
+	{% if (pageActuelle | int) == num_max %}
+	<form class="form-listing" method="POST" action="#">
+		<button class="disableb" type="button" disabled>Page Suivante</button>
+	</form>
+	{% else %}
+	<form class="form-listing" method="POST" action="{{ url_for('afficherListeAlbum', numero_page=(pageActuelle | int)+1) }}">
+	<button class="activeb" type="submit">Page Suivante</button>
+	</form>
+	{% endif %}
+	</section>
+
 		</ul>
 {% endblock %}

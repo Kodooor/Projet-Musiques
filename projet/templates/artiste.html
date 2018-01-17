@@ -7,11 +7,34 @@
 		<ul id="ul">
 		{% for a in listeArtiste %}
 			<li id="li">
+				<a href="{{url_for('afficherInfoArtiste', art=a.nom )}}">
 				<p>{{ a.nom }}</p>
-        <a href="{{url_for('afficherInfoArtiste', art=a.nom )}}">
-        <img width="80%" src="{{ url_for('static', filename='Images/Artiste/'+a.nom+'.jpg')}}"alt="Image non trouvée">
+        <img width="60%" src="{{ url_for('static', filename='Images/Artiste/'+a.nom+'.jpg')}}"alt="Image non trouvée">
         <a/>
 			</li>
 		{% endfor %}
 		</ul>
+		<section class="button-listing">
+			{% if pageActuelle == "0" %}
+			<form class="form-listing" method="POST" action="#">
+		<button class="disableb" type="button" disabled>Page précédente</button>
+		</form>
+		{% else %}
+		<form class="form-listing" method="POST" action="{{ url_for('afficherListeAlbum', numero_page=(pageActuelle | int)-1) }}">
+			<button class="activeb" type="submit">Page précédente</button>
+		</form>
+		{% endif %}
+		<form class="form-listing" method="POST" action="{{ url_for('afficherListeAlbum', numero_page=pageActuelle) }}">
+		<button class="activeb" type="submit">Page actuelle : {{(pageActuelle | int)}}</button>
+		</form>
+		{% if (pageActuelle | int) == num_max %}
+		<form class="form-listing" method="POST" action="#">
+			<button class="disableb" type="button" disabled>Page Suivante</button>
+		</form>
+		{% else %}
+		<form class="form-listing" method="POST" action="{{ url_for('afficherListeAlbum', numero_page=(pageActuelle | int)+1) }}">
+		<button class="activeb" type="submit">Page Suivante</button>
+		</form>
+		{% endif %}
+		</section>
 {% endblock %}

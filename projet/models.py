@@ -1,6 +1,7 @@
 from .app import db
 from flask_login import UserMixin
 from .app import login_manager
+import math
 
 class Artiste(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -51,6 +52,9 @@ def get_la_liste_album():
 
 def get_album(id):
 	return Album.query.get(id)
+
+def get_id_album(page=0):
+	return Album.query.paginate(page,6,error_out=False).items
 
 def get_albums_pour_page(numero):
     debut = int(numero) * 6

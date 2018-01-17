@@ -60,13 +60,15 @@ def home():
 		"home.html",
 		title="Accueil de iMusic")
 
-@app.route("/album/<numero_page>")
+@app.route("/album/<numero_page>", methods=("POST","GET"))
 def afficherListeAlbum(numero_page):
 	listeAlbum = get_albums_pour_page(numero_page)
+	num_max = get_nombre_de_page_album()
 	return render_template(
 		"albums.html",
 		title="Liste des albums",
-		listeAlbum=listeAlbum)
+		pageActuelle = numero_page,
+		listeAlbum=listeAlbum, pageMax = num_max)
 
 @app.route("/album/informations/<num_album>")
 def afficherInformationsAlbums(num_album):
@@ -123,9 +125,11 @@ def ajouterAlbum():
 @app.route("/artiste/<numero_page>")
 def afficherListeArtiste(numero_page):
 	listeArtiste = get_artiste_page(numero_page)
+	num_max = get_nombre_de_page_album()
 	return render_template("artiste.html",
 		title="Liste des artistes",
-		listeArtiste=listeArtiste)
+		pageActuelle = numero_page,
+		listeArtiste=listeArtiste, pageMax = num_max)
 
 @app.route("/artiste/infoArtiste/<art>")
 def afficherInfoArtiste(art):
