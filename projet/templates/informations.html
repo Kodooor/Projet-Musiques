@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='informations.css') }}"/>
 {% endblock %}
 {% block main %}
+<h1 id="titre"> {{title}} </h1>
 		<section id="seee">
 			<h2 id="h2">{{ informations.titre }}</h2>
 			<p>Artiste : {{ artiste }}</p>
@@ -11,4 +12,12 @@
     	<p>Genre : {{ informations.genre }}</p>
     	<p>Date de sortie : {{ informations.dateSortie }}</p>
 		</section>
+		{% if current_user.is_authenticated %}
+<form class="form-listing" method="POST" action="{{ url_for('editer_album', num_album=(informations.id | int)) }}">
+	<button type="submit">Editer informations</button>
+</form>
+<form class="form-listing" method="POST" action="#">
+	<button type="submit">Supprimer</button>
+</form>
+{% endif %}
 {% endblock %}

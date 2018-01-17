@@ -5,25 +5,14 @@
 href="{{ url_for('static', filename='') }}"/>
 {% endblock %}
 {% block main %}
-<form role="form" enctype="multipart/form-data" method="POST"	action="{{ url_for('ChangerAlbumForm') }}">
+<h1 id="titre"> {{title}} </h1>
+<form role="form" enctype="multipart/form-data" method="POST"	action="{{ url_for('editer_album', num_album = num_album) }}">
 	{{ form.hidden_tag() }}
 	<div class={% if form.titre.errors %}"form-group has-error"{% else %}"form-group"{% endif %}>
 	{{ form.titre.label }} {{ form.titre(size=50, class_="form-control") }}
 	{{ form.genre.label }} {{ form.genre(size=50, class_="form-control") }}
 	{{ form.dateSortie.label }} {{ form.dateSortie(size=50, class_="form-control") }}
-	{{ form.image.label }} {{ form.image(accept=".jpg")}}
-	{{ form.artiste.label }} {{ form.artiste(size=50, class_="form-control") }}
 	</div>
-  <input class="btn btn-default" type="submit" value="Valider">
-	{% if form.titre.errors %}
-	<ul class="list-group">
-		{% for e in form.titre.errors %}
-		<li class="list-group_item list-group-item-danger">{{ e }}</li>
-		{% endfor %}
-	</ul>
-	{% endif %}
-	<a class="nav-link" href="{{url_for('home')}}">
 	<input class="btn btn-default" type="submit" value="Valider">
-	</a>
 </form>
 {% endblock %}

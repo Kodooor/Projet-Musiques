@@ -79,21 +79,18 @@ def afficherInformationsAlbums(num_album):
 		title="Info",
 		informations=informations, artiste=artiste)
 
-@app.route("/album/informations/editer_album/<num_album>")
+@app.route("/album/informations/editer_album/<num_album>", methods=("POST","GET"))
 def editer_album(num_album):
-	f = ChangerAlbumForm()
+	album = get_album(num_album)
+	f = ChangerAlbumForm(image = album.image,artiste = album.artiste.nom,dateSortie = album.dateSortie, titre = album.titre, genre = album.genre, )
 	if f.validate_on_submit():
-		user = f.get_authenticated_user()
-		if user:
-			album = get_album(num_album)
-			album.titre = f.titre.data
-			album.genre = f.genre.data
-			album.dateSortie = f.dateSortie.data
-			album.image = f.image.data
-			album.artiste = f.artiste.data
-			db.session.commit()
-			return redirect(url_for('/album/informations/<num_album>'))
-		return render_template("editer_album", sujet = "Editer les informations de l'album", form = f, title="Changer les infomations de l'album")
+		album.titre = f.titre.data
+		album.genre = f.genre.data
+		album.dateSortie = f.dateSortie.data
+		db.session.commit()
+		return redirect(url_for('afficherInformationsAlbums', num_album = num_album))
+	return render_template("editer_album.html", num_album= num_album, sujet = "Editer les informations de l'album", form = f, title="Changer les infomations de l'album")
+
 
 
 @app.route("/album/recherche/", methods=("POST","GET"))
