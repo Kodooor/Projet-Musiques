@@ -94,6 +94,17 @@ def editer_album(num_album):
 			db.session.commit()
 			return redirect(url_for('/album/informations/<num_album>'))
 		return render_template("editer_album", sujet = "Editer les informations de l'album", form = f, title="Changer les infomations de l'album")
+
+
+@app.route("/album/recherche/", methods=("POST","GET"))
+def afficherListeAlbumsRecherche():
+	nom_album=request.form.get('recherche_album')
+	liste = get_liste_album(nom_album)
+	return render_template(
+		"albums.html",
+		title="Liste des albums",
+		listeAlbum=liste)
+
 @app.route("/album/ajouter_album/", methods=("POST","GET"))
 def ajouterAlbum():
 	f = CreerAlbumForm()

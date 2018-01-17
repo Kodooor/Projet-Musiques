@@ -53,6 +53,9 @@ def get_la_liste_album():
 def get_album(id):
 	return Album.query.get(id)
 
+def get_liste_album(titre):
+	return Album.query.filter(Album.titre.like("%" + titre + "%")).order_by(Album.titre).all()
+
 def get_id_album(page=0):
 	return Album.query.paginate(page,6,error_out=False).items
 
