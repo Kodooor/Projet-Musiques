@@ -52,6 +52,9 @@ def get_la_liste_album():
 def get_album(id):
 	return Album.query.get(id)
 
+def get_liste_album(titre):
+	return Album.query.filter(Album.titre.like("%" + titre + "%")).order_by(Album.titre).all()
+
 def get_albums_pour_page(numero):
     debut = int(numero) * 6
     fin = int(numero) * 6 + 6
