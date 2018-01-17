@@ -172,14 +172,9 @@ def profil(log):
 def profil_none():
 	return render_template("profil.html", title="Profil", listeP=[])
 
-
-
 @app.route("/profil/playlist/<idPlay>")
 def afficherPlaylist(idPlay):
 	listeR = get_musiques(idPlay)
-	print("ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp")
-	print(idPlay)
-	print(listeR)
 	return render_template("profil.html",title="Playlist", listeR = listeR)
 
 
