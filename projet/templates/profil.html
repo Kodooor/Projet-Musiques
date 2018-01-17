@@ -1,25 +1,21 @@
 {% extends "base.html" %}
 {% block styles %}
 {{ super() }}
-<link rel="stylesheet"
-href="{{ url_for('static', filename='home.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='profil.css') }}"/>
 {% endblock %}
 {% block main %}
   {% if current_user.is_authenticated %}
     <h2> Profil de {{ current_user.login}}</h2>
-
-    <div class='changerMdp'>
-      <a class="nav-link" href="{{url_for('changermdp')}}">Changer mon mot de passe</a>
-    </div>
     {% if title == 'Profil' %}
+    <div class='changerMdp'>
+      <a class="nav-link" href="{{url_for('changermdp')}}">-> Changer mon mot de passe</a>
+    </div>
     <div class='playlists'>
       <h3> Mes playlists </h3>
       <ul>
         {% for r in listeP %}
           <li>
-            <a href="{{url_for('afficherPlaylist', idPlay= r.id )}}">
-            <p>{{ r.titre }}</p>
-            </a>
+            <p><a href="{{url_for('afficherPlaylist', idPlay= r.id )}}">{{ r.titre }}</a></p>
           </li>
         {% endfor %}
       </ul>
@@ -37,13 +33,11 @@ href="{{ url_for('static', filename='home.css') }}"/>
     </div>
     {%endif%}
 
-
-
-
   {% else %}
-    <h2> Voulez vous créer un compte ? </h2>
-    <a class="nav-link" href="{{url_for('creercompte')}}">Créer un compte</a>
+    <p> Connectez vous pour avoir accès à votre profil
+    <a class="nav-link" href="{{url_for('connexion')}}">-> Me connecter</a> </p>
 
-
+    <p> Vous n'avez pas encore de compte ?
+    <a class="nav-link" href="{{url_for('creercompte')}}">-> Créer mon compte</a> </p>
   {% endif %}
 {% endblock %}

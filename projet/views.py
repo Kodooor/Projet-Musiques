@@ -12,7 +12,6 @@ from werkzeug.utils import secure_filename
 import os
 import shutil
 
-
 class LoginForm(FlaskForm):
 	next = HiddenField()
 	login = StringField('Login :', validators=[DataRequired()])
@@ -72,10 +71,11 @@ def afficherListeAlbum(numero_page):
 @app.route("/album/informations/<num_album>")
 def afficherInformationsAlbums(num_album):
 	informations = get_album(num_album)
+	artiste = getNomArt(informations.artiste_id)
 	return render_template(
 		"informations.html",
 		title="Info",
-		informations=informations)
+		informations=informations, artiste=artiste)
 
 @app.route("/album/informations/editer_album/<num_album>")
 def editer_album(num_album):
@@ -117,7 +117,7 @@ def ajouterAlbum():
 			db.session.commit()
 			os.mkdir(os.path.join(mkpath('static/Musique/'),f.titre.data))
 		return redirect(url_for("home"))
-	return render_template("ajouter_album.html", sujet="init", form=f, error=True)
+	return render_template("ajouter_album.html", sujet="init", form=f, error=True, title="Ajouter un album")
 
 
 @app.route("/artiste/<numero_page>")
@@ -189,6 +189,10 @@ def deconnexion():
 def profil(log):
 	listeP = get_playlists(log)
 	return render_template("profil.html",title="Profil", listeP = listeP)
+
+@app.route("/profil/")
+def profil_none():
+	return render_template("profil.html", title="Profil", listeP=[])
 
 @app.route("/profil/playlist/<idPlay>")
 def afficherPlaylist(idPlay):

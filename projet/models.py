@@ -69,10 +69,11 @@ def get_nombre_de_page_album():
 def get_artiste():
 	return Artiste.query.all()
 
-# GESTION DES ARTISTES
+def getNomArt(idA):
+	return Artiste.query.get(idA).nom
+
 def get_artiste_par_nom(nom):
 	return Artiste.query.filter(Artiste.nom == nom).all()
-
 
 def get_artiste_page(numero):
     debut = int(numero) * 6
@@ -111,15 +112,12 @@ def get_playlists(login):
 	# return listeRep
 
 def get_musiques(idP):
-	listeR = RelationPM.query.all()
-	listeM = Musique.query.all()
-	listeRep = []
-	for r in listeR:
-		if r.playlist_id == idP:
-			for m in listeM:
-				if r.musique_id == m.id :
-					listeRep.append(r)
-	return listeRep
+	listeR = RelationPM.query.filter(RelationPM.playlist_id == idP).all()
+	listeMusique = []
+	for R in listeR:
+		listeMusique.append(R.musique)
+	return listeMusique
+
 
 
 @login_manager.user_loader

@@ -1,9 +1,5 @@
-.starter-template{
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
 body{
-  padding-top: 10em;
+  padding-top: 5em;
 }
 #ul{
   padding-top: 2em;
@@ -11,10 +7,13 @@ body{
   flex-wrap: wrap;
   list-style: none;
 }
-#li{
+.liste{
   padding-left: 2em;
-  flex: 1 1 0;
+  flex: 1 0 27%;
 }
-body>main a{
+h2{
+  text-align: center;
+}
+.changerMdp{
   text-align: center;
 }
